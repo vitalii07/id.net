@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <namesp1:CheckTransactionDetailsResponse xmlns:namesp1="http://www.iesnare.com/dra/api/CheckTransactionDetails">
+      <namesp1:result xsi:type="xsd:string">A</namesp1:result>
+      <namesp1:reason xsi:type="xsd:string"/>
+      <namesp1:trackingnumber xsi:type="xsd:string">311032959311123631</namesp1:trackingnumber>
+      <namesp1:endblackbox xsi:type="xsd:string">bLqMq9zYqKdX1uPVIwsfS8PUJtpEH5G3C5CZ5K+OvREd93xlaFqVOUa0uiGeBHB4lnxk++77IWVwxfJmHba9MSb5o2093hHy4reNln5KUY1WOriaVrVoWQ==</namesp1:endblackbox>
+      <namesp1:details>
+
+        <namesp1:detail>
+          <namesp1:name>device.alias</namesp1:name>
+          <namesp1:value>695241323745175501</namesp1:value>
+        </namesp1:detail>
+
+        <namesp1:detail>
+          <namesp1:name>device.browser.configuredlang</namesp1:name>
+          <namesp1:value>EN-US,EN;Q=0.5</namesp1:value>
+        </namesp1:detail>
+
+      </namesp1:details>
+    </namesp1:CheckTransactionDetailsResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

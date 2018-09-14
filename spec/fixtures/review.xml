@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <namesp1:CheckTransactionDetailsResponse xmlns:namesp1="http://www.iesnare.com/dra/api/CheckTransactionDetails">
+      <namesp1:result xsi:type="xsd:string">R</namesp1:result>
+      <namesp1:reason xsi:type="xsd:string">Device Not Provided</namesp1:reason>
+      <namesp1:trackingnumber xsi:type="xsd:string">392062383635945832</namesp1:trackingnumber>
+      <namesp1:endblackbox xsi:type="xsd:string"/>
+      <namesp1:details>
+        <namesp1:detail>
+          <namesp1:name>rule[0].type</namesp1:name>
+          <namesp1:value>Device Not Provided</namesp1:value>
+        </namesp1:detail>
+        <namesp1:detail>
+          <namesp1:name>ruleset.rulesmatched</namesp1:name>
+          <namesp1:value>1</namesp1:value>
+        </namesp1:detail>
+        <namesp1:detail>
+          <namesp1:name>ruleset.score</namesp1:name>
+          <namesp1:value>-1</namesp1:value>
+        </namesp1:detail>
+      </namesp1:details>
+    </namesp1:CheckTransactionDetailsResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Fault>
+      <faultcode>SOAP-ENV:Sender</faultcode>
+      <faultstring>Invalid API request checkTransactionDetails</faultstring>
+      <faultactor>http://www.iesnare.com/dra/api/checkTransactionDetails</faultactor>
+      <detail>
+        <namesp1:RemoteException xmlns:namesp1="http://www.iesnare.com/dra/api/checkTransactionDetails">
+          <namesp1:module>checkTransactionDetails</namesp1:module>
+          <namesp1:requestid>7C247349-8E59-4B9D-AEF2-92B8F7395915</namesp1:requestid>
+        </namesp1:RemoteException>
+      </detail>
+    </SOAP-ENV:Fault>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

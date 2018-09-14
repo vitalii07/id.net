@@ -1,0 +1,13 @@
+<env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="http://www.iesnare.com/dra/api/CheckTransactionDetails" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+  <env:Body>
+    <n1:CheckTransactionDetails>
+      <n1:subscriberid>944102</n1:subscriberid>
+      <n1:subscriberaccount>OLTP</n1:subscriberaccount>
+      <n1:subscriberpasscode>4VRFCZGF</n1:subscriberpasscode>
+      <n1:enduserip>127.0.0.1</n1:enduserip>
+      <n1:accountcode>50d447e15dfe363d6d00000b</n1:accountcode>
+      <n1:beginblackbox>0400jrKIR8+/SlsXk1Rjuv1iJrV04AV6owo+p4oOVXHR2EC618jaAj5wdZuvoAGJLbgVZzutwHzio6ZnhYJoua02EZsZhQDshHSvTwdQ/NnU5tVsfUnodIcDT+TfXy+BLAEWWRahEd1XkyvLqLwi4N2gDeixLXGBICA18sQyiQagYnHhUgAyemihT1vWqbU3/b1iYDvethm0ixXKgDzSlcJpdvZ9iFWtPXgk0LVQmADUFBkeOXlaNyb7iHbMay0KyjjdcXJrH3kiOS0neoTRMLPv2omhxiW0/GgFu0UlQqFWDuBmTKOh8yuPPpU6HnkGCLaaQkjj/Bf3sgBzQ8rRU4xX4D0YLXuOWeFz09AMY7408GLvUSbJ+Ltz3R3+1lLYqHZE6KevhtAFVaqQZ/9t6S8ku5OQHT8m9bjrKULPxBs5mS8PLfa7DNuC/P+NgcXLGqnQIkQNgVvPfUq5AUf1ExG2N7VNM6E+MU6gT+HoQVdeZcQo3Ae3QbKoOkcOjS9hgMLfoPo5S5HWDUxMRURYpS0hVe6HOYdWG7EoACuo5YOEIvGfHUJkTVP7EMSmRZOWcyLmDiaZgrFVtGtJSkYJNTlGEP7G1r9jtxwXWpD/KHWPyqIZyKocRUllVPS+s/08EdCeJeOgytCt6IVyqEjqvysk7dGo3DM7xeUy3MSVYktexqr4v0akzyYVagfLTV8Zrg1H2xi/j8MamCLmx2vNwg2Qek3xamCBkVJwXHXwiE68Ewe7qDkO2sgsz65eixrUGUsKFzyD4Pfk0vC0xZ3htjvfXJQL8E0wyEGvvlNbHf+Gr+ew8G5BQyGauHxf9i9QO+0RmhW6BfBEu9/bdD5d3JW2p3wGecZNbkXLPMeEjEkf5P9n2wzV0s703Hz0A1qBOMBTDZRaCJzdMpxbPHLM85N7FFxoQ71KVN87epsTu3BOEtyc33Dg7G6fYCRqLLeMAGPT8wZgDmOAYgFosOA2WoKDctSkmO6Y1WDt</n1:beginblackbox>
+      <n1:type>registration</n1:type>
+    </n1:CheckTransactionDetails>
+  </env:Body>
+</env:Envelope>

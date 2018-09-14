@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Playtomic id.net Example</title>
+</head>
+<body>
+<script src="playtomic.js"></script>
+<script>
+	Playtomic.initialize("APP ID", "http://127.0.0.1:3000/", playtomicReady);
+	
+	function playtomicReady(data, response){
+	
+		//submitScore();
+		//listScores();
+		//saveAchievement();
+		//listAchievements();
+		//listAppAchievments();
+		//mapSave();
+		//rateMap();
+		//mapList();
+		//mapLoad();
+		addStatsHit();
+		
+		function submitScore(){
+			var score = {
+				playername: "monkey",
+				playerid: "1234",
+				points: 110,
+				table: "highscores",
+				highest: true,
+				allowduplicates: false
+			};
+			
+			Playtomic.Leaderboards.save(score, function(response) {
+				if(response.success) {
+					console.log("Score saved!");
+				} else {
+					console.log("Score failed "+response.errorcode);
+				}
+			});
+		}
+	
+		function listScores(){
+			var listOptions = {
+				table: "highscores",
+				mode: "alltime",
+				perpage: 10,
+				page: 1,
+				playerid: null,
+				highest: true,
+				allowduplicates: false
+			};
+			
+			Playtomic.Leaderboards.list(listOptions, function listComplete(scores, numscores, response) {
+				if(response.success) {
+					console.log(scores.length + " scores returned out of " + numscores);
+
+					for(var i=0; i<scores.length; i++) {
+						var score = scores[i];
+						console.log(" - " + score.playername + " got " + score.points + " on " + score.rdate);
+					}
+				} else {
+					console.log("Score list failed "+response.errorcode);
+				}
+			});
+		}
+	
+		function saveAchievement(){
+			var achievement = {
+				achievement: "unlocked monkey",
+				achievementkey: "d894jsnv53d",
+				playerid: "123",
+				playername: "ben2",
+				overwrite: false,
+				allowduplicates: false,
+				fields: {
+					difficulty: "easy"
+				}
+			};
+
+			Playtomic.Achievements.save(achievement, function(response) {
+				if(response.success) {
+					console.log('success '+response.errorcode);
+				} else {
+					console.log('failure '+response.errorcode);
+				}
+			});
+		}
+	
+		function listAchievements(){
+			var playerachievements = {
+				playerid: "123",
+				friendslist: ["2", "3", "4"]
+			};
+
+			Playtomic.Achievements.list(playerachievements, function(achievements, response) {
+				if(response.success) {
+					for(var i=0; i<achievements.length; i++) {
+						console.log(JSON.stringify(achievements[i])); 
+					}
+				}
+			});
+		}
+
+		function listAppAchievments(){
+			Playtomic.Achievements.list({}, function(achievements, response) {
+				if(response.success) {
+					for(var i=0; i<achievements.length; i++) {
+						console.log(JSON.stringify(achievements[i]));
+					}
+				}
+			});
+		}
+		
+		function mapSave(){
+			var level = {
+				name: "My level",
+				data: "obj1=cannon&obj1x=120&obj1y=180",
+				playername: "Ben",
+				playerid: "1234"
+			}
+
+			Playtomic.PlayerLevels.save(level, function saveComplete(level, response) {
+				if(response.success) {
+					console.log("Level saved successfully, the level id is " + level.levelid);
+				} else {
+					console.log('level save failed '+response.errorcode);
+				}
+			});
+		}
+
+		function rateMap(){
+			Playtomic.PlayerLevels.rate('54d11dc775b2e5cc1211e8ba', 8, function rateComplete(response) {
+				if(response.success) {
+					console.log("Rating complete");
+				} else {
+					console.log('rating failed '+response.errormessage);
+				}
+			});
+		}
+
+		function mapList(){
+			var listoptions = {
+				mode: "newest",
+				data: false,
+				page: 1,
+				perpage: 30
+			};
+  
+			Playtomic.PlayerLevels.list(listoptions, function listLoaded(levels, numlevels, response) {
+				if(response.success) {
+					for(var i=0; i<levels.length; i++) {
+						console.log(JSON.stringify(levels));
+					}
+				} else {
+					// Level list failed to load because of response.errormessage with response.errorcode
+				}
+			});
+		}
+	
+		function mapLoad(){
+			Playtomic.PlayerLevels.load('54d11dc775b2e5cc1211e8ba', function loadComplete(level, response) {
+				if(response.success) {
+					console.log("Map loaded "+level.name+" "+level.data);
+				} else {
+					console.log('level load failed');
+				}
+			});
+		}
+
+		function addStatsHit(){
+			var options = {address: 'https://apps.id.net/some-game'}
+			Playtomic.Stats.hit(options, function getHit(data, response) {
+				if(response.success) {
+					// ZZ means country code unknown. Happens with local testing
+					console.log("Player is from " + data.country);
+				} else {
+					// request failed because of response.errormessage with response.errorcode
+				}
+			});
+		}
+	}
+</script>
+</body>
+</html>

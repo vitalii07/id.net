@@ -1,0 +1,39 @@
+development:
+  sessions:
+    default:
+      hosts:
+        - mongo:27017
+      database: id_net_development
+      options:
+        read: :primary_preferred
+
+    strong_default:
+      hosts:
+        - mongo:27017
+      database: id_net_development
+      options:
+        read: :primary_preferred
+        consistency: :strong
+
+
+    elasticsearch:
+      hosts:
+        - es:27017
+        - es:27018
+      database: id_net_development
+      options:
+        read: :secondary_preferred
+
+test:
+  sessions:
+    default: &test_default
+      hosts:
+        - mongo:27017
+      database: id_net_test_core
+      options:
+        read: :primary_preferred
+        consistency: :strong
+        safe: true
+
+    strong_default:
+      <<: *test_default

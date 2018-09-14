@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <namesp1:GetEvidenceDetailsResponse xmlns:namesp1="http://www.iesnare.com/dra/api/GetEvidenceDetails">
+      <namesp1:evidence_details>
+        <namesp1:evidence>
+          <namesp1:type>4-1</namesp1:type>
+          <namesp1:source>ID.net</namesp1:source>
+        </namesp1:evidence>
+        <namesp1:evidence>
+          <namesp1:type>4-2</namesp1:type>
+          <namesp1:source>ID.net</namesp1:source>
+        </namesp1:evidence>
+      </namesp1:evidence_details>
+    </namesp1:GetEvidenceDetailsResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

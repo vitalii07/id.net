@@ -1,0 +1,25 @@
+web:
+  build: .
+  command: rails s
+  links:
+    - redis
+    - mysql
+    - memcached
+    - es
+    - mongo
+  volumes:
+    - .:/idnet
+  ports:
+    - "3001:3000"
+redis:
+  image: redis
+mysql:
+  image: mysql
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+memcached:
+  image: memcached
+es:
+  image: elasticsearch
+mongo:
+  image: mongo:2.6

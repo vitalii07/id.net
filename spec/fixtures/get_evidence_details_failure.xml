@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Fault>
+      <faultcode>SOAP-ENV:Sender</faultcode>
+      <faultstring>Invalid value for parameter devicealias: asd</faultstring>
+      <faultactor>http://www.iesnare.com/dra/api/GetEvidenceDetails</faultactor>
+      <detail>
+        <namesp1:RemoteException xmlns:namesp1="http://www.iesnare.com/dra/api/GetEvidenceDetails">
+          <namesp1:module>GetEvidenceDetails</namesp1:module>
+          <namesp1:requestid>B667B9DB-0CBB-44B1-A97C-A5E411FECA6E</namesp1:requestid>
+        </namesp1:RemoteException>
+      </detail>
+    </SOAP-ENV:Fault>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

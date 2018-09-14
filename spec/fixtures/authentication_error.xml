@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Fault>
+      <faultcode>SOAP-ENV:Sender</faultcode>
+      <faultstring>Authentication denied</faultstring>
+      <faultactor>http://www.iesnare.com/dra/api/CheckTransactionDetails</faultactor>
+      <detail>
+        <namesp1:RemoteException xmlns:namesp1="http://www.iesnare.com/dra/api/CheckTransactionDetails">
+          <namesp1:module>CheckTransactionDetails</namesp1:module>
+          <namesp1:requestid>6D3EE01F-DF34-4DF3-9650-A23A7BD174EA</namesp1:requestid>
+        </namesp1:RemoteException>
+      </detail>
+    </SOAP-ENV:Fault>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

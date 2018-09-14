@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Fault>
+      <faultcode>SOAP-ENV:Sender</faultcode>
+      <faultstring>Invalid value for parameter accountcode: asd</faultstring>
+      <faultactor>http://www.iesnare.com/dra/api/RetractAccountEvidence</faultactor>
+      <detail>
+        <namesp1:RemoteException xmlns:namesp1="http://www.iesnare.com/dra/api/RetractAccountEvidence">
+          <namesp1:module>RetractAccountEvidence</namesp1:module>
+          <namesp1:requestid>925AC40E-F4E2-4334-BFDE-2C9E45545D9F</namesp1:requestid>
+        </namesp1:RemoteException>
+      </detail>
+    </SOAP-ENV:Fault>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
